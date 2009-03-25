@@ -101,6 +101,9 @@
 		F5C580E50EDA250900995434 /* libgit2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C580E40EDA250900995434 /* libgit2.a */; };
 		F5C580F50EDA251100995434 /* libgit2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C580E40EDA250900995434 /* libgit2.a */; };
 		F5C6F68D0E65FF9300478D97 /* PBGitLane.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5C6F68C0E65FF9300478D97 /* PBGitLane.mm */; };
+		F5D3DE450F7AD93000DFC7BF /* PBGitVersionComparer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D3DE440F7AD93000DFC7BF /* PBGitVersionComparer.m */; };
+		F5D3DE820F7ADE5C00DFC7BF /* PBGitVersionComparer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D3DE440F7AD93000DFC7BF /* PBGitVersionComparer.m */; };
+		F5D3DE930F7ADEB100DFC7BF /* testMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D3DE910F7ADE7900DFC7BF /* testMain.m */; };
 		F5DFFA6C0E075D8800617813 /* PBEasyFS.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DFFA6B0E075D8800617813 /* PBEasyFS.m */; };
 		F5E424110EA3E4D60046E362 /* PBDiffWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E424100EA3E4D60046E362 /* PBDiffWindow.xib */; };
 		F5E424150EA3E4E10046E362 /* PBDiffWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E424130EA3E4E10046E362 /* PBDiffWindowController.m */; };
@@ -253,6 +256,10 @@
 		F5C6F68B0E65FF9300478D97 /* PBGitLane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGitLane.h; sourceTree = "<group>"; };
 		F5C6F68C0E65FF9300478D97 /* PBGitLane.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PBGitLane.mm; sourceTree = "<group>"; };
 		F5D2DC850EA401A80034AD24 /* PBGitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGitConfig.h; sourceTree = "<group>"; };
+		F5D3DE430F7AD93000DFC7BF /* PBGitVersionComparer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGitVersionComparer.h; sourceTree = "<group>"; };
+		F5D3DE440F7AD93000DFC7BF /* PBGitVersionComparer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGitVersionComparer.m; sourceTree = "<group>"; };
+		F5D3DE7A0F7ADE5100DFC7BF /* TestGitX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestGitX; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D3DE910F7ADE7900DFC7BF /* testMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testMain.m; sourceTree = "<group>"; };
 		F5D619ED0EAE62EA00341D73 /* html */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		F5DFFA6A0E075D8800617813 /* PBEasyFS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBEasyFS.h; sourceTree = "<group>"; };
 		F5DFFA6B0E075D8800617813 /* PBEasyFS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBEasyFS.m; sourceTree = "<group>"; };
@@ -315,6 +322,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5D3DE780F7ADE5100DFC7BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -353,6 +367,7 @@
 				8D1107320486CEB800E47090 /* GitX.app */,
 				913D5E490E55644600CECEA2 /* gitx */,
 				F5886A100ED5D33D0066E74C /* SpeedTest.app */,
+				F5D3DE7A0F7ADE5100DFC7BF /* TestGitX */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,6 +375,7 @@
 		29B97314FDCFA39411CA2CEA /* GitTest */ = {
 			isa = PBXGroup;
 			children = (
+				F5D3DE8F0F7ADE6600DFC7BF /* Test */,
 				F5886A080ED5D26B0066E74C /* SpeedTest */,
 				913D5E420E5563FD00CECEA2 /* cli */,
 				F57CC43E0E05E472000472E2 /* Aux */,
@@ -527,6 +543,8 @@
 				F50A41220EBB875D00208746 /* PBNiceSplitView.m */,
 				F5FC41F20EBCBD4300191D80 /* PBGitXProtocol.h */,
 				F5FC41F30EBCBD4300191D80 /* PBGitXProtocol.m */,
+				F5D3DE430F7AD93000DFC7BF /* PBGitVersionComparer.h */,
+				F5D3DE440F7AD93000DFC7BF /* PBGitVersionComparer.m */,
 			);
 			name = Aux;
 			sourceTree = "<group>";
@@ -564,6 +582,14 @@
 				F5C6F68C0E65FF9300478D97 /* PBGitLane.mm */,
 			);
 			name = Graphing;
+			sourceTree = "<group>";
+		};
+		F5D3DE8F0F7ADE6600DFC7BF /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				F5D3DE910F7ADE7900DFC7BF /* testMain.m */,
+			);
+			name = Test;
 			sourceTree = "<group>";
 		};
 		F5E927E10E883D2E00056E75 /* History */ = {
@@ -687,6 +713,22 @@
 			productReference = F5886A100ED5D33D0066E74C /* SpeedTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F5D3DE790F7ADE5100DFC7BF /* TestGitX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5D3DE810F7ADE5400DFC7BF /* Build configuration list for PBXNativeTarget "TestGitX" */;
+			buildPhases = (
+				F5D3DE770F7ADE5100DFC7BF /* Sources */,
+				F5D3DE780F7ADE5100DFC7BF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestGitX;
+			productName = TestGitX;
+			productReference = F5D3DE7A0F7ADE5100DFC7BF /* TestGitX */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -703,6 +745,7 @@
 				913D5E480E55644600CECEA2 /* cli tool */,
 				F5886A0F0ED5D33D0066E74C /* SpeedTest */,
 				F56439F70F792B2100A579C2 /* Generate PList Prefix */,
+				F5D3DE790F7ADE5100DFC7BF /* TestGitX */,
 			);
 		};
 /* End PBXProject section */
@@ -842,6 +885,7 @@
 				47DBDB580E94EDE700671A1E /* DBPrefsWindowController.m in Sources */,
 				47DBDB670E94EE8B00671A1E /* PBPrefsWindowController.m in Sources */,
 				47DBDBCA0E95016F00671A1E /* PBNSURLPathUserDefaultsTransfomer.m in Sources */,
+				F5D3DE450F7AD93000DFC7BF /* PBGitVersionComparer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +919,15 @@
 				F5886A170ED5D34F0066E74C /* PBGitRepository.m in Sources */,
 				F5886A190ED5D3560066E74C /* PBGitRef.m in Sources */,
 				F5886A160ED5D3490066E74C /* speedtest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5D3DE770F7ADE5100DFC7BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D3DE930F7ADEB100DFC7BF /* testMain.m in Sources */,
+				F5D3DE820F7ADE5C00DFC7BF /* PBGitVersionComparer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1130,6 +1183,60 @@
 			};
 			name = Release;
 		};
+		F5D3DE7C0F7ADE5300DFC7BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TestGitX;
+			};
+			name = Debug;
+		};
+		F5D3DE7D0F7ADE5300DFC7BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TestGitX;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1174,6 +1281,15 @@
 			buildConfigurations = (
 				F5886A130ED5D33E0066E74C /* Debug */,
 				F5886A140ED5D33E0066E74C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5D3DE810F7ADE5400DFC7BF /* Build configuration list for PBXNativeTarget "TestGitX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5D3DE7C0F7ADE5300DFC7BF /* Debug */,
+				F5D3DE7D0F7ADE5300DFC7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
