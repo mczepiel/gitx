@@ -5,6 +5,7 @@
 //  Created by Pieter de Bie on 13-06-08.
 //  Copyright __MyCompanyName__ 2008 . All rights reserved.
 //
+#import <Sparkle/SUUpdater.h>
 
 #import "ApplicationController.h"
 #import "PBGitRevisionCell.h"
@@ -15,6 +16,7 @@
 #import "PBGitXProtocol.h"
 #import "PBPrefsWindowController.h"
 #import "PBNSURLPathUserDefaultsTransfomer.h"
+#import "PBGitVersionComparer.h"
 
 @implementation ApplicationController
 @synthesize cliProxy;
@@ -35,8 +37,15 @@
 	/* Value Transformers */
 	NSValueTransformer *transformer = [[PBNSURLPathUserDefaultsTransfomer alloc] init];
 	[NSValueTransformer setValueTransformer:transformer forName:@"PBNSURLPathUserDefaultsTransfomer"];
-	
+
+	[[SUUpdater sharedUpdater] setDelegate:self];
+
 	return self;
+}
+
+- (id <SUVersionComparison>)versionComparatorForUpdater:(SUUpdater *)updater
+{
+	return [[PBGitVersionComparer alloc] init];
 }
 
 - (void)registerServices
