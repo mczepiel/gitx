@@ -202,4 +202,14 @@
 	[super removeView];
 }
 
+- (void) showCommitsFromTree:(id) sender
+{
+	NSMutableArray *filePaths = [NSMutableArray arrayWithObjects:@"HEAD", @"--", NULL];
+	for (PBGitTree *tree in [treeController selectedObjects])
+		[filePaths addObject:[tree fullPath]];
+	PBGitRevSpecifier *revSpec = [[PBGitRevSpecifier alloc] initWithParameters:filePaths];
+
+	repository.currentBranch = [repository addBranch:revSpec];
+}
+
 @end
